@@ -1,0 +1,28 @@
+cabal-version:      3.0
+name:               HC14T07-library
+version:            0.1.0.0
+license:            BSD-3-Clause
+license-file:       LICENSE
+author:             delon500
+maintainer:         dwenyeve@gmail.com
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+library
+    import:          warnings
+    hs-source-dirs:  src
+    exposed-modules: Hello
+    build-depends:  base ^>=4.17.2.1
+    default-language: GHC2021
+
+executable HC14T07-library-exe 
+    import:           warnings
+
+    main-is:          Main.hs
+
+    build-depends:    base ^>=4.17.2.1, HC14T07-library
+    hs-source-dirs:   app
+    default-language: GHC2021
